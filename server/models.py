@@ -17,7 +17,6 @@ session_speakers = Table(
     Column('speaker_id', Integer, ForeignKey('speakers.id'))
 )
 
-# Event Model
 class Event(db.Model):
     __tablename__ = 'events'
 
@@ -30,7 +29,6 @@ class Event(db.Model):
     def __repr__(self):
         return f'<Event {self.id}, {self.name}, {self.location}>'
 
-# Session Model
 class Session(db.Model):
     __tablename__ = 'sessions'
 
@@ -45,7 +43,6 @@ class Session(db.Model):
     def __repr__(self):
         return f'<Session {self.id}, {self.title}, {self.start_time}>'
 
-# Speaker Model
 class Speaker(db.Model):
     __tablename__ = 'speakers'
 
@@ -58,7 +55,6 @@ class Speaker(db.Model):
     def __repr__(self):
         return f'<Speaker {self.id}, {self.name}>'
 
-# Bio Model
 class Bio(db.Model):
     __tablename__ = 'bios'
 
